@@ -1,0 +1,37 @@
+int delta (int,int) ;
+
+affine bpmaxw {N,M,W1,W2| N>=W1>=3 && M>=W2>=3 }
+input
+	int seq1 {i| 0 <= i < N} ;
+	int seq2 {i| 0 <= i < M} ;
+output
+	int FTable {i1,j1,i2,j2| 0<=i1<=j1+1<=N && 0<=i2<=j2+1<=M &&
+			i1+i2 <= j1+j2+1 && j1-i1<=W1 && j2-i2<=W2};
+
+local
+	int P1 {i,j| 0 <= i <= j < N };
+	int P2 {i,j| 0 <= i <= j < M };
+let
+	P1[i,j] = case
+		{ | j-i<= 3}: 0 ;
+		{ | j-i > 3}: max(P1[i+1,j-1] + delta (seq1[i],seq1[j]),
+					  reduce(max, [k], {|k<j}:P1[i,k]+P1[k+1,j]));
+	esac;
+	P2[i,j] = case
+		{ | j-i<= 3}: 0 ;
+		{ | j-i > 3}: max (P2[i+1,j-1] + delta (seq2[M-i-1],seq2[M-j-1]),
+					  reduce(max, [k], {| k<j}:P2[i,k]+P2[k+1,j]));
+	esac;
+	FTable[i1,j1,i2,j2] = case
+		{ | j1 < i1} : P2[i2, j2];
+		{ | j2 < i2} : P1[i1, j1];
+		{ | i1 == j1 && i2 == j2} : delta(seq1[i1], seq2[M-i2-1]); 
+		{ | i1<=j1 && i2<=j2 && i1+i2<=j1+j2-1} : 
+			reduce(max, [k1, k2], FTable[i1,k1,i2,k2] + FTable[k1+1,j1,k2+1,j2]) max
+			case {|j1-i1 > 3}: FTable[i1+1, j1-1, i2, j2] + delta(seq1[i1], seq1[j1]);
+				 {|j1-i1 <= 3}: 0; esac max
+			case {|j2-i2 > 3}: FTable[i1, j1, i2+1, j2-1] + delta(seq2[M-i2-1], seq2[M-j2-1]);
+			 	 {|j2-i2 <= 3}: 0; esac;
+	esac;
+.
+
