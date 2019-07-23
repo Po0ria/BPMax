@@ -13,6 +13,11 @@ Setup eclipse plugin using this [link](https://www.cs.colostate.edu/AlphaZ/wiki/
 
 This repository includes:
 * script.sh
+  *This is the script for running eclipse via terminal
+* BPMaxW.ab
+  *Alphabet code for BPMax equation
+* BPMaxW.cs
+  *script for compiling the .ab file
 
 
 
