@@ -9,9 +9,16 @@ For further information refer to Ebrahimpour et al.
 ## What is Alphaz? 
 [AlphaZ](http://www.cs.colostate.edu/AlphaZ/wiki/doku.php) is an open source tool-set for program analysis, transformation and parallelization in the Polyhedral Equational Model. It is being developed by the Mélange group at CSU, and uses an equational language called Alpha/Alphabets.
 
+Setup eclipse plugin using this [link](https://www.cs.colostate.edu/AlphaZ/wiki/doku.php?id=eclipse_setup)
+
+This repository includes:
+* script.sh
+
+
 
 ## References
 [1] Ali Ebrahimpour-Boroojeny, Sanjay Rajopadhye, Hamidreza Chitsaz BPPart and BPMax: RNA-RNA Interaction Partition Function and Structure Prediction for the Base Pair Counting Model
 
 ## Contact
 Feel free to contact me: Email: pooria[at]colosate[dot]edu
+Note: Profossor Sanjay Rajopadhey made significant contribution to this project.
