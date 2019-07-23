@@ -21,4 +21,5 @@ This repository includes:
 
 ## Contact
 Feel free to contact me: Email: pooria[at]colosate[dot]edu
+
 Note: Profossor Sanjay Rajopadhey made significant contribution to this project.
