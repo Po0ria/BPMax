@@ -13,14 +13,11 @@ Setup eclipse plugin using this [link](https://www.cs.colostate.edu/AlphaZ/wiki/
 
 This repository includes:
 * script.sh
-  *This is the script for running eclipse via terminal
+  * This is the script for running eclipse via terminal
 * BPMaxW.ab
-  *Alphabet code for BPMax equation
+  * Alphabet code for BPMax equation
 * BPMaxW.cs
-  *script for compiling the .ab file
-
-
-
+  * script for compiling the .ab file
 ## References
 [1] Ali Ebrahimpour-Boroojeny, Sanjay Rajopadhye, Hamidreza Chitsaz BPPart and BPMax: RNA-RNA Interaction Partition Function and Structure Prediction for the Base Pair Counting Model
 
