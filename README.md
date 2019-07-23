@@ -2,7 +2,9 @@
 "RNA-RNA interaction (RRI) is ubiquitous and has complex roles in the cellular functions. In human health studies, miRNA-target and lncRNAs are among an elite class of RRIs that have been extensively studied and shown to play significant roles in various diseases including cancer. Bacterial ncRNA-target and RNA interference are other classes of RRIs that have received significant attention. Accordingly, RRI bioinformatics tools tailored for those elite classes have been proposed in the last decade." [1] 
 
 Computational models of RRI ( piRNA, BPMax, BPMaxW) are important but very expensive in time and memory space.
+
 • Time Complexity: O(𝑁^3𝑀^3)
+
 • Space Complexity: O(𝑁^3𝑀^3)
 
 For further information refer to Ebrahimpour et al.
